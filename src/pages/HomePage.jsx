@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import Scrapbook14DaysHero from '../components/sections/Scrapbook14DaysHero';
 import ScrapbookReflectionsHero from '../components/sections/ScrapbookReflectionsHero';
 import ScrapbookYouHero from '../components/sections/ScrapbookYouHero';
-import ScrapbookLettersHero from '../components/sections/ScrapbookLettersHero';
+
 import './HomePage.css';
 
 export default function HomePage() {
@@ -115,9 +115,7 @@ export default function HomePage() {
         <ScrapbookYouHero />
       </div>
 
-      <div id="letters-scrapbook-section">
-        <ScrapbookLettersHero />
-      </div>
+
     </div>
   );
 }
