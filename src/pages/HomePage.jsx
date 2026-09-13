@@ -1,26 +1,46 @@
 import React from 'react';
-import SectionIndicator from '../components/layout/SectionIndicator';
-import Section01Hero from '../components/sections/Section01Hero';
-import Section02FourteenDays from '../components/sections/Section02FourteenDays';
-import Section03LittleThings from '../components/sections/Section03LittleThings';
-import Section04PhotoMoments from '../components/sections/Section04PhotoMoments';
-import Section05Music from '../components/sections/Section05Music';
-import Section06Dreams from '../components/sections/Section06Dreams';
-import Section07Final from '../components/sections/Section07Final';
+import { useNavigate } from 'react-router-dom';
+import FloatingPhoto from '../components/ui/FloatingPhoto';
+import cakeImg from '../assets/cake.png';
+import './HomePage.css';
 
 export default function HomePage() {
+  const navigate = useNavigate();
+
   return (
-    <>
-      <SectionIndicator sections={7} />
-      <main className="sections-wrapper">
-        <Section01Hero />
-        <Section02FourteenDays />
-        <Section03LittleThings />
-        <Section04PhotoMoments />
-        <Section05Music />
-        <Section06Dreams />
-        <Section07Final />
-      </main>
-    </>
+    <div className="home-container">
+      <div className="home-content">
+        <div className="home-text-section">
+          <p className="home-eyebrow fade-in-up delay-1">for someone who definitely didn't ask for this</p>
+          <h1 className="home-title fade-in-up delay-2">RAKSHANDA</h1>
+          <p className="home-subtitle handwritten fade-in-up delay-3">happy birthday, yaarr &hearts;</p>
+          <div className="home-date-badge fade-in-up delay-4">
+            <span>14 &bull; 09 &bull; 2026</span>
+          </div>
+          
+          <div className="home-actions fade-in-up delay-5">
+            <button className="home-primary-btn" onClick={() => navigate('/14-days')}>
+              Begin the Journey &rarr;
+            </button>
+          </div>
+        </div>
+
+        <div className="home-visual-section fade-in delay-4">
+          <div className="home-photo-wrapper">
+            <FloatingPhoto 
+              src="/images/rakshanda-01.jpg" 
+              className="home-main-photo"
+              rotation={-3}
+            />
+            {/* Small decorative elements */}
+            <div className="home-deco cake-deco">
+              <img src={cakeImg} alt="Cake" />
+            </div>
+            <div className="home-deco star-deco star-1">✦</div>
+            <div className="home-deco star-deco star-2">✦</div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
