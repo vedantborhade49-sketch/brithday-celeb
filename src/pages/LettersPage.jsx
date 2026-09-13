@@ -13,13 +13,27 @@ export default function LettersPage() {
       {/* Background Dimmer when a letter is open */}
       <div className="letters-dimmer" onClick={() => setOpenLetterId(null)}></div>
 
+      {/* Ambient background details */}
+      <div className="letters-ambient-bg">
+        <span className="bg-decor star" style={{ top: '15%', left: '10%' }}>✦</span>
+        <span className="bg-decor dot" style={{ top: '25%', left: '15%' }}>·</span>
+        <span className="bg-decor dot" style={{ top: '20%', right: '20%' }}>·</span>
+        <span className="bg-decor star" style={{ top: '65%', right: '12%' }}>✦</span>
+        <span className="bg-decor dot" style={{ top: '70%', right: '15%' }}>·</span>
+        <span className="bg-decor petal" style={{ top: '75%', left: '18%' }}>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1"><path d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z" strokeDasharray="1 3"/></svg>
+        </span>
+        <span className="bg-decor petal" style={{ top: '30%', right: '15%' }}>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1"><path d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z" strokeDasharray="1 3"/></svg>
+        </span>
+      </div>
+
       <div className="letters-page-content">
         
         {/* Intro Section */}
         <section className="letters-intro">
           <h1 className="letters-title">LETTERS</h1>
           <p className="letters-subtitle">some things are better written down.</p>
-          <p className="letters-instruction">open whichever one you want.</p>
         </section>
 
         {/* Collection Section */}
