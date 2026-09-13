@@ -1,9 +1,30 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import './AnimatedFlower.css';
 
-export default function AnimatedFlower({ type = 'tulip', style, className = '' }) {
+export default function AnimatedFlower({ type = 'tulip', style, className = '', delay = 0 }) {
   return (
-    <div className={`animated-flower type-${type} ${className}`} style={style}>
+    <motion.div 
+      className={`animated-flower type-${type} ${className}`} 
+      style={style}
+      initial={{ opacity: 0, y: 30, rotate: -10 }}
+      whileInView={{ 
+        opacity: 0.8, 
+        y: 0,
+        rotate: [-5, 5, -5] 
+      }}
+      transition={{
+        opacity: { duration: 1, delay },
+        y: { duration: 1, delay, type: "spring" },
+        rotate: { 
+          duration: 6, 
+          repeat: Infinity, 
+          ease: "easeInOut",
+          delay: delay + 1
+        }
+      }}
+      viewport={{ once: true, margin: "-50px" }}
+    >
       {type === 'tulip' ? (
         <svg width="40" height="120" viewBox="0 0 40 120" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M20 40C20 40 10 120 20 120" stroke="var(--text-muted)" strokeWidth="1.5" className="stem" />
@@ -18,6 +39,6 @@ export default function AnimatedFlower({ type = 'tulip', style, className = '' }
           <path d="M30 40C25 20 30 5 35 10C40 15 35 25 30 40Z" fill="var(--accent-blush)" className="petal center-petal" />
         </svg>
       )}
-    </div>
+    </motion.div>
   );
 }

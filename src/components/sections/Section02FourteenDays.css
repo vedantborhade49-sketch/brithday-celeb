@@ -26,8 +26,7 @@
 .giant-number {
   font-family: var(--font-serif);
   font-size: clamp(15rem, 40vw, 35rem);
-  color: var(--accent-blush);
-  opacity: 0.4;
+  color: rgba(255, 255, 255, 0.08); /* Translucent watermark effect */
   line-height: 0.8;
   letter-spacing: -0.05em;
   transition: transform 0.5s ease-out;
@@ -59,12 +58,4 @@
   color: var(--text-accent);
 }
 
-.notes-layer {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 5;
-  pointer-events: none;
-}
+

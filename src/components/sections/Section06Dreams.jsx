@@ -1,10 +1,12 @@
 import React from 'react';
 import ScrollReveal from '../layout/ScrollReveal';
+import AnimatedFlower from '../ui/AnimatedFlower';
 import './Section06Dreams.css';
 
 export default function Section06Dreams() {
   return (
-    <section id="section-06" className="section-dreams">
+    <section id="section-06" className="home-scene scene-deep section-dreams">
+      <AnimatedFlower type="tulip" style={{ top: '15%', left: '10%' }} delay={0.3} />
       
       {/* Subtle world map pattern via SVG */}
       <div className="world-pattern"></div>
@@ -16,7 +18,7 @@ export default function Section06Dreams() {
         </ScrollReveal>
         
         <ScrollReveal direction="up" delay={400}>
-          <p className="dreams-subtext handwritten">and maybe every country after that.</p>
+          <p className="dreams-subtext serif-font">somewhere between here and everywhere.</p>
         </ScrollReveal>
 
         {/* Animated Airplane */}

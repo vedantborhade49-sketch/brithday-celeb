@@ -1,0 +1,56 @@
+.homepage-wrapper {
+  position: relative;
+  z-index: 10;
+  background-color: transparent;
+}
+
+.home-scene {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  /* Very slight transition at boundaries */
+  transition: background-color 0.8s ease; 
+}
+
+/* -------------------------------------
+   Scene Background Colors 
+------------------------------------- */
+
+.scene-light {
+  background-color: #FFF7FA;
+  color: var(--text-main);
+}
+
+.scene-deep {
+  background-color: #C97892;
+  /* Override text variables for dark sections */
+  color: #FFFDFB;
+  --text-main: #FFFDFB;
+  --text-accent: #FFFDFB;
+  --text-muted: #F8D8E3;
+}
+
+.scene-baby-pink {
+  background-color: #FFF0F5;
+  color: var(--text-main);
+}
+
+.scene-dark-rose {
+  background-color: #C86B86;
+  /* Override text variables for dark sections */
+  color: #FFFDFB;
+  --text-main: #FFFDFB;
+  --text-accent: #FFFDFB;
+  --text-muted: #F8D8E3;
+}
+
+.scene-blush {
+  background-color: #F8D8E3;
+  color: var(--text-main);
+}
+
+.scene-cream {
+  background-color: #FFF5F7;
+  color: var(--text-main);
+}

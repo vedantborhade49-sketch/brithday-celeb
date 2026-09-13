@@ -1,85 +1,52 @@
 .section-photos {
-  background-color: var(--bg-cream);
   flex-direction: column;
   padding: 10vh 0;
   z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.photos-header-area {
-  width: 100%;
-  text-align: center;
-  margin-bottom: 10vh;
-  z-index: 15;
-}
-
-.photos-header {
-  font-family: var(--font-serif);
-  font-size: clamp(2rem, 5vw, 4rem);
-  color: var(--text-main);
-  margin-bottom: 1rem;
-}
-
-.photos-subtext {
-  font-family: var(--font-hand);
-  font-size: 1.5rem;
-  color: var(--text-accent);
-}
-
-.scrapbook-desk {
-  position: relative;
-  width: 100%;
-  max-width: 1200px;
-  height: 80vh;
-  min-height: 600px;
-}
-
-.desk-item {
+.cinematic-particles {
   position: absolute;
-  cursor: pointer;
-}
-
-.pos-1 {
-  top: 10%;
-  left: 15%;
-  z-index: 2;
-}
-
-.pos-2 {
-  top: 40%;
-  right: 20%;
-  z-index: 3;
-}
-
-.pos-3 {
-  bottom: 10%;
-  left: 30%;
-  z-index: 4;
-}
-
-.pos-4 {
-  top: 15%;
-  right: 10%;
+  inset: 0;
+  pointer-events: none;
   z-index: 1;
 }
 
-.photo-large {
-  width: 350px;
-  aspect-ratio: 3/4;
+.glow-dot {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background-color: #FFFDFB;
+  border-radius: 50%;
+  box-shadow: 0 0 10px 2px rgba(255, 253, 251, 0.4);
+  animation: pulseGlow 4s infinite alternate ease-in-out;
 }
 
-.photo-medium {
-  width: 280px;
-  aspect-ratio: 4/5;
+@keyframes pulseGlow {
+  0% { transform: scale(0.8); opacity: 0.2; }
+  100% { transform: scale(1.5); opacity: 0.8; }
 }
 
-.photo-small {
-  width: 200px;
-  aspect-ratio: 1/1;
+.cinematic-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
 }
 
-.photo-wide {
-  width: 300px;
-  aspect-ratio: 16/9;
+.cinematic-phrase {
+  font-size: clamp(3rem, 6vw, 5rem);
+  color: var(--text-main);
+  margin-bottom: 2rem;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  transform: rotate(-3deg);
+}
+
+.cinematic-subtext {
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  color: var(--text-muted);
+  font-style: italic;
 }
 
 /* Lightbox */
@@ -131,22 +98,6 @@
 }
 
 @media (max-width: 768px) {
-  .scrapbook-desk {
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-  }
-  
-  .desk-item {
-    position: relative !important;
-    top: auto !important;
-    left: auto !important;
-    right: auto !important;
-    bottom: auto !important;
-  }
-  
   .photo-large, .photo-medium, .photo-small, .photo-wide {
     width: 90vw;
     max-width: 400px;

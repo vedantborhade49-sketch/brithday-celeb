@@ -1,43 +1,44 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import ScrollReveal from '../layout/ScrollReveal';
+import HandwrittenNote from '../ui/HandwrittenNote';
 import './Section05Music.css';
 
 export default function Section05Music() {
   return (
-    <section id="section-05" className="section-music">
+    <section id="section-05" className="home-scene scene-blush section-music">
       <div className="music-container">
         
         <ScrollReveal direction="up">
-          <span className="tiny-label">currently in her rotation</span>
-        </ScrollReveal>
-        
-        <ScrollReveal direction="up" delay={200}>
-          <h2 className="music-title">REFLECTIONS</h2>
+          <h2 className="playful-title serif-font">currently in her rotation</h2>
         </ScrollReveal>
 
-        <ScrollReveal direction="up" delay={500}>
-          <div className="minimal-player">
-            <button className="player-play-btn" aria-label="Play Reflections">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M8 5V19L19 12L8 5Z" />
-              </svg>
-            </button>
-            <div className="waveform">
-              {/* Fake animated waveform */}
-              {Array.from({ length: 40 }).map((_, i) => (
-                <div 
-                  key={i} 
-                  className="wave-bar" 
-                  style={{ 
-                    height: `${20 + Math.random() * 80}%`,
-                    animationDelay: `${Math.random() * 1}s`
-                  }} 
-                />
-              ))}
+        {/* Scattered Interactive Phrases */}
+        <div className="phrases-layer">
+          <ScrollReveal direction="left" delay={200}>
+            <div className="interactive-phrase" style={{ top: '20%', left: '15%' }}>
+              <HandwrittenNote text="ok yaarr" rotation={-5} />
             </div>
-            <span className="time-display">0:00</span>
-          </div>
-        </ScrollReveal>
+          </ScrollReveal>
+          
+          <ScrollReveal direction="right" delay={400}>
+            <div className="interactive-phrase" style={{ top: '35%', right: '20%' }}>
+              <HandwrittenNote text="chill karo yar" rotation={8} />
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal direction="left" delay={600}>
+            <div className="interactive-phrase" style={{ bottom: '25%', left: '25%' }}>
+              <HandwrittenNote text="mat kar lala" rotation={-3} />
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal direction="up" delay={800}>
+            <div className="interactive-phrase" style={{ bottom: '15%', right: '30%' }}>
+              <HandwrittenNote text="basaline" rotation={12} />
+            </div>
+          </ScrollReveal>
+        </div>
 
       </div>
     </section>

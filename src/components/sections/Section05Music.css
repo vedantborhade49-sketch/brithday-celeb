@@ -1,88 +1,54 @@
 .section-music {
-  background-color: var(--bg-cream); /* Transition slightly if needed */
   z-index: 10;
 }
 
 .music-container {
   width: 100%;
-  max-width: 800px;
-  text-align: center;
+  max-width: 1200px;
+  min-height: 100vh;
+  padding: 15vh 5%;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 5%;
+  position: relative;
 }
 
-.music-title {
-  font-family: var(--font-serif);
-  font-size: clamp(3rem, 6vw, 5rem);
+.playful-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
   color: var(--text-main);
+  margin-bottom: 2rem;
   letter-spacing: -0.02em;
-  margin-top: 1rem;
-  margin-bottom: 4rem;
 }
 
-.minimal-player {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
+.phrases-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  max-width: 600px;
-  background: var(--bg-ivory);
-  padding: 1.5rem 2.5rem;
-  border-radius: 100px;
-  box-shadow: var(--shadow-soft);
-  border: 1px solid rgba(139, 74, 88, 0.05);
+  height: 100%;
+  z-index: 5;
+  pointer-events: none;
 }
 
-.player-play-btn {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: var(--accent-rose);
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-  flex-shrink: 0;
+.interactive-phrase {
+  position: absolute;
+  pointer-events: auto; /* Allow hover */
+  cursor: grab;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.player-play-btn:hover {
-  background-color: var(--accent-dark);
-  transform: scale(1.05);
-}
-
-.waveform {
-  flex: 1;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-
-.wave-bar {
-  flex: 1;
-  background-color: var(--accent-rose);
-  border-radius: 2px;
-  opacity: 0.6;
-  animation: pulseWave 1.5s infinite ease-in-out alternate;
-}
-
-.minimal-player:hover .wave-bar {
-  opacity: 1;
-  background-color: var(--text-accent);
+.interactive-phrase:hover {
+  transform: scale(1.1) rotate(5deg);
+  z-index: 10;
 }
 
 .time-display {
   font-size: 0.85rem;
   color: var(--text-muted);
   font-variant-numeric: tabular-nums;
-}
-
-@keyframes pulseWave {
-  0% { transform: scaleY(0.7); }
-  100% { transform: scaleY(1.1); }
+  position: relative;
+  z-index: 1;
 }
 
 @media (max-width: 768px) {

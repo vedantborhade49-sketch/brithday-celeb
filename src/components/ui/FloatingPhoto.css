@@ -1,18 +1,11 @@
 .ui-floating-photo {
   position: absolute;
-  transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.4s ease;
-  box-shadow: var(--shadow-photo);
-  background: var(--bg-ivory);
+  background: var(--bg-ivory, #fffdfb);
   z-index: 10;
   transform-style: preserve-3d;
   will-change: transform;
   padding: 12px 12px 40px 12px;
-  border-radius: 2px;
-}
-
-.ui-floating-photo:hover {
-  box-shadow: 0 30px 60px rgba(74, 59, 66, 0.12), 0 10px 20px rgba(74, 59, 66, 0.06);
-  z-index: 20;
+  border-radius: 4px;
 }
 
 .photo-frame {

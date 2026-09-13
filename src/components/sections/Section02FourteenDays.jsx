@@ -5,7 +5,7 @@ import './Section02FourteenDays.css';
 
 export default function Section02FourteenDays() {
   return (
-    <section id="section-02" className="section-fourteen">
+    <section id="section-02" className="home-scene scene-deep section-fourteen">
       <div className="fourteen-container">
         
         {/* The Giant Number in Background */}
@@ -22,26 +22,7 @@ export default function Section02FourteenDays() {
           </ScrollReveal>
           
           <ScrollReveal direction="up" delay={800}>
-            <p className="fourteen-subtext">and somehow, this happened.</p>
-          </ScrollReveal>
-        </div>
-
-        {/* Floating Handwritten Notes */}
-        <div className="notes-layer">
-          <ScrollReveal direction="left" delay={1200}>
-            <HandwrittenNote text="ok yaarr" rotation={-5} style={{ top: '20%', left: '15%' }} />
-          </ScrollReveal>
-          
-          <ScrollReveal direction="right" delay={1400}>
-            <HandwrittenNote text="chill karo yar" rotation={8} style={{ top: '30%', right: '20%' }} />
-          </ScrollReveal>
-
-          <ScrollReveal direction="left" delay={1600}>
-            <HandwrittenNote text="mat kar lala" rotation={-3} style={{ bottom: '25%', left: '25%' }} />
-          </ScrollReveal>
-
-          <ScrollReveal direction="up" delay={1800}>
-            <HandwrittenNote text="basaline" rotation={12} style={{ bottom: '15%', right: '30%' }} />
+            <p className="fourteen-subtext serif-font">that's how long I've known you.</p>
           </ScrollReveal>
         </div>
 

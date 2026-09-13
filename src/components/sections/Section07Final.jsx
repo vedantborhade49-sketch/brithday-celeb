@@ -9,7 +9,7 @@ export default function Section07Final() {
   };
 
   return (
-    <section id="section-07" className="section-final">
+    <section id="section-07" className="home-scene scene-cream section-final">
       
       {/* Soft light effect */}
       <div className="soft-light"></div>
@@ -17,15 +17,11 @@ export default function Section07Final() {
       <div className="final-container">
         
         <ScrollReveal direction="up" delay={200}>
-          <h1 className="final-title">happy birthday, Rakshanda &hearts;</h1>
+          <p className="final-message serif-font">there's a lot more ahead.</p>
         </ScrollReveal>
         
         <ScrollReveal direction="up" delay={600}>
-          <p className="final-message">
-            I hope this year brings you everything you've ever dreamed of.
-            <br />
-            Here's to the skies, the world, and beyond.
-          </p>
+          <h1 className="final-title">happy birthday, Rakshanda ♡</h1>
         </ScrollReveal>
 
         <ScrollReveal direction="up" delay={1000}>

@@ -5,72 +5,31 @@ import HandwrittenNote from '../ui/HandwrittenNote';
 import './Section04PhotoMoments.css';
 
 export default function Section04PhotoMoments() {
-  const [lightboxImg, setLightboxImg] = useState(null);
-
-  const openLightbox = (src) => setLightboxImg(src);
-  const closeLightbox = () => setLightboxImg(null);
-
   return (
-    <section id="section-04" className="section-photos">
-      <div className="photos-header-area">
-        <ScrollReveal direction="up">
-          <h2 className="photos-header">okay, maybe we need more pictures</h2>
-          <p className="photos-subtext">we've only known each other for 14 days, give me a break.</p>
-        </ScrollReveal>
+    <section id="section-04" className="home-scene scene-dark-rose section-photos">
+      
+      {/* Subtle glowing dots / stars */}
+      <div className="cinematic-particles">
+        {[...Array(20)].map((_, i) => (
+          <div key={i} className="glow-dot" style={{
+            top: `${Math.random() * 100}%`,
+            left: `${Math.random() * 100}%`,
+            animationDelay: `${Math.random() * 5}s`,
+            opacity: Math.random() * 0.5 + 0.1
+          }}></div>
+        ))}
       </div>
 
-      <div className="scrapbook-desk">
+      <div className="cinematic-content">
+        <ScrollReveal direction="up" delay={200}>
+          <h2 className="cinematic-phrase handwritten">okay yaarr...</h2>
+        </ScrollReveal>
         
-        <ScrollReveal direction="up" delay={200} className="desk-item pos-1">
-          <div onClick={() => openLightbox('/images/rakshanda-01.jpg')}>
-            <FloatingPhoto 
-              src="/images/rakshanda-01.jpg" 
-              className="photo-large" 
-              rotation={-4} 
-            />
-          </div>
-          <HandwrittenNote text="✨" rotation={10} style={{ top: '-10%', right: '-5%' }} />
+        <ScrollReveal direction="up" delay={800}>
+          <p className="cinematic-subtext serif-font">you know what i mean.</p>
         </ScrollReveal>
-
-        <ScrollReveal direction="up" delay={400} className="desk-item pos-2">
-          <div onClick={() => openLightbox('/images/rakshanda-02.jpg')}>
-            <FloatingPhoto 
-              src="/images/rakshanda-02.jpg" 
-              className="photo-medium" 
-              rotation={6} 
-            />
-          </div>
-        </ScrollReveal>
-
-        <ScrollReveal direction="up" delay={600} className="desk-item pos-3">
-          <div onClick={() => openLightbox('/images/rakshanda-03.jpg')}>
-            <FloatingPhoto 
-              src="/images/rakshanda-03.jpg" 
-              className="photo-small" 
-              rotation={-12} 
-            />
-          </div>
-        </ScrollReveal>
-
-        <ScrollReveal direction="up" delay={800} className="desk-item pos-4">
-          <div onClick={() => openLightbox('/images/rakshanda-04.jpg')}>
-            <FloatingPhoto 
-              src="/images/rakshanda-04.jpg" 
-              className="photo-wide" 
-              rotation={3} 
-            />
-          </div>
-        </ScrollReveal>
-
       </div>
 
-      {/* Lightbox */}
-      {lightboxImg && (
-        <div className="lightbox-overlay" onClick={closeLightbox}>
-          <button className="lightbox-close" aria-label="Close lightbox">&times;</button>
-          <img src={lightboxImg} alt="Enlarged view" className="lightbox-img" onClick={(e) => e.stopPropagation()} />
-        </div>
-      )}
     </section>
   );
 }
