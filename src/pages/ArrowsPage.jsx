@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import ArrowsGame from '../components/sections/arrows/ArrowsGame';
-import ScrapbookReflectionsHero from '../components/sections/ScrapbookReflectionsHero';
 
 export default function ArrowsPage() {
   useEffect(() => {
@@ -9,7 +8,6 @@ export default function ArrowsPage() {
 
   return (
     <div className="page-container fade-in">
-      <ScrapbookReflectionsHero />
       <ArrowsGame />
     </div>
   );
