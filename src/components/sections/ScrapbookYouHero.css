@@ -32,9 +32,9 @@
   font-family: 'Playfair Display', serif;
   font-size: 6.5rem;
   font-weight: 500;
-  color: #72293b; /* Deep burgundy for text */
+  color: #72293b;
   margin: 0;
-  line-height: 0.9;
+  line-height: 1.0;
   letter-spacing: -0.02em;
 }
 
@@ -43,8 +43,8 @@
   font-size: 5.5rem;
   font-weight: 500;
   color: #72293b;
-  margin: 0 0 25px 0;
-  line-height: 0.9;
+  margin: 10px 0 25px 0;
+  line-height: 1.0;
   letter-spacing: -0.02em;
 }
 

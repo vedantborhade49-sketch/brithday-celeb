@@ -24,17 +24,6 @@ export default function Scrapbook14DaysHero() {
         <p>14 days &hearts;</p>
       </div>
 
-      {/* Middle Left Polaroid */}
-      <div className="sb14-element polaroid-mid-left">
-        <div className="sb14-tape tape-mid-left"></div>
-        <div className="sb14-polaroid">
-          <div className="sb14-polaroid-img">
-            {/* Placeholder */}
-            <div style={{width:'100%', height:'100%', background:'#d5b4b9'}} />
-          </div>
-          <p className="sb14-polaroid-caption">chill karo yar &hearts;</p>
-        </div>
-      </div>
 
       {/* Bottom Left Checklist */}
       <div className="sb14-element note-checklist">
@@ -50,15 +39,15 @@ export default function Scrapbook14DaysHero() {
         </ul>
       </div>
 
-      {/* Top Right Polaroid */}
-      <div className="sb14-element polaroid-top-right">
+      {/* Main Single Polaroid */}
+      <div className="sb14-element polaroid-main">
         <div className="sb14-small-tag tag-mat-kar">mat kar lala</div>
-        <div className="sb14-tape tape-top-right"></div>
-        <div className="sb14-polaroid polaroid-sm">
+        <div className="sb14-tape tape-main"></div>
+        <div className="sb14-polaroid">
           <div className="sb14-polaroid-img">
-            {/* Placeholder */}
-            <div style={{width:'100%', height:'100%', background:'#e3c4c8'}} />
+            <img src="/images/w1.jpeg" alt="Rakhashanda" style={{width:'100%', height:'100%', objectFit:'cover'}} />
           </div>
+          <p className="sb14-polaroid-caption">just 14 days in...</p>
         </div>
       </div>
 
@@ -74,17 +63,6 @@ export default function Scrapbook14DaysHero() {
         <p>basaline &hearts;</p>
       </div>
 
-      {/* Bottom Right Polaroid */}
-      <div className="sb14-element polaroid-bottom-right">
-        <div className="sb14-tape tape-bottom-right"></div>
-        <div className="sb14-polaroid polaroid-tilt">
-          <div className="sb14-polaroid-img">
-            {/* Placeholder */}
-            <div style={{width:'100%', height:'100%', background:'#bba2a6'}} />
-          </div>
-          <p className="sb14-polaroid-caption sm-caption">just 14 days in...</p>
-        </div>
-      </div>
 
       {/* Bottom Right Box Text */}
       <div className="sb14-element box-text-corner">

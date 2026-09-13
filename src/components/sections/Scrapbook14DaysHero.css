@@ -124,19 +124,7 @@
 }
 .note-top-left p { margin: 5px 0; }
 
-/* Mid Left Polaroid */
-.polaroid-mid-left {
-  top: 35%;
-  left: 8%;
-  transform: rotate(-4deg);
-}
-.polaroid-mid-left .sb14-polaroid { width: 280px; }
-.polaroid-mid-left .tape-mid-left {
-  width: 90px;
-  top: -15px;
-  left: 50%;
-  transform: translateX(-50%) rotate(2deg);
-}
+
 
 /* Bottom Left Checklist */
 .note-checklist {
@@ -164,25 +152,25 @@
 }
 .sb14-list li { margin-bottom: 5px; }
 
-/* Top Right Polaroid */
-.polaroid-top-right {
-  top: 15%;
+/* Main Single Polaroid */
+.polaroid-main {
+  top: 22%;
   right: 12%;
   transform: rotate(5deg);
 }
-.polaroid-top-right .polaroid-sm { width: 240px; padding-bottom: 25px; }
-.polaroid-top-right .sb14-polaroid-img { aspect-ratio: 4/3; }
-.tape-top-right {
-  width: 100px;
+.polaroid-main .sb14-polaroid { width: 320px; }
+.polaroid-main .sb14-polaroid-img { aspect-ratio: 4/5; }
+.tape-main {
+  width: 120px;
   top: -15px;
-  left: 20px;
-  transform: rotate(-2deg);
+  left: 50%;
+  transform: translateX(-50%) rotate(-2deg);
 }
 
 /* Middle Right Note */
 .note-basaline {
-  top: 45%;
-  right: 8%;
+  top: 55%;
+  left: 20%;
   background: #eccdd3; /* pink torn paper */
   padding: 15px 25px;
   box-shadow: 2px 4px 15px rgba(119, 74, 82, 0.1);
@@ -207,20 +195,7 @@
 }
 .sb14-far-right-text p { margin: 0; }
 
-/* Bottom Right Polaroid */
-.polaroid-bottom-right {
-  bottom: 20%;
-  right: 15%;
-  transform: rotate(-6deg);
-}
-.polaroid-bottom-right .sb14-polaroid { width: 260px; }
-.tape-bottom-right {
-  width: 80px;
-  top: -12px;
-  left: 50%;
-  transform: translateX(-50%) rotate(4deg);
-}
-.sm-caption { font-size: 1.3rem; }
+
 
 /* Bottom Right Corner Box Text */
 .box-text-corner {
@@ -321,10 +296,7 @@
 @media (max-width: 1200px) {
   .sb14-element { transform: scale(0.85); }
   .note-top-left { left: 0; }
-  .polaroid-mid-left { left: 0; }
-  .note-checklist { left: 0; bottom: 15%; }
-  .polaroid-top-right { right: 5%; }
-  .polaroid-bottom-right { right: 5%; bottom: 25%; }
+  .polaroid-main { right: 5%; }
   .box-text-corner { right: 0; bottom: 0; }
 }
 

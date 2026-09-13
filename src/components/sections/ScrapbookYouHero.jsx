@@ -37,8 +37,7 @@ export default function ScrapbookYouHero() {
         <div className="sy-tape tape-tall-left"></div>
         <div className="sy-polaroid polaroid-tall">
           <div className="sy-polaroid-img">
-            {/* Placeholder */}
-            <div style={{width:'100%', height:'100%', background:'#cc9999'}} />
+            <img src="/images/r2.png" alt="Rakhashanda" style={{width:'100%', height:'100%', objectFit:'cover'}} />
           </div>
           <p className="sy-polaroid-caption">this felt right here &hearts;</p>
         </div>
@@ -57,8 +56,7 @@ export default function ScrapbookYouHero() {
         <div className="sy-tape tape-bottom-left"></div>
         <div className="sy-polaroid">
           <div className="sy-polaroid-img">
-            {/* Placeholder */}
-            <div style={{width:'100%', height:'100%', background:'#bd8c8c'}} />
+            <img src="/images/r3.png" alt="Rakhashanda" style={{width:'100%', height:'100%', objectFit:'cover'}} />
           </div>
           <p className="sy-polaroid-caption sm-caption">14 days in...</p>
         </div>
@@ -92,8 +90,7 @@ export default function ScrapbookYouHero() {
         <div className="sy-tape tape-upper-right"></div>
         <div className="sy-polaroid polaroid-square">
           <div className="sy-polaroid-img">
-            {/* Placeholder */}
-            <div style={{width:'100%', height:'100%', background:'#d69a9a'}} />
+            <img src="/images/r4.png" alt="Rakhashanda" style={{width:'100%', height:'100%', objectFit:'cover'}} />
           </div>
           <p className="sy-polaroid-caption">just because &hearts;</p>
         </div>
@@ -104,8 +101,7 @@ export default function ScrapbookYouHero() {
         <div className="sy-tape tape-wide-right"></div>
         <div className="sy-polaroid polaroid-wide">
           <div className="sy-polaroid-img">
-            {/* Placeholder */}
-            <div style={{width:'100%', height:'100%', background:'#b28080'}} />
+            <img src="/images/r5.png" alt="Rakhashanda" style={{width:'100%', height:'100%', objectFit:'cover', objectPosition:'top'}} />
           </div>
           <p className="sy-polaroid-caption">more of this.</p>
         </div>
@@ -129,7 +125,7 @@ export default function ScrapbookYouHero() {
         <div className="sy-film-hole"></div>
         <div className="sy-film-hole"></div>
         <div className="sy-film-frame">
-          <div style={{width:'100%', height:'100%', background:'#8c4a4a'}} />
+          <img src="/images/r3.png" alt="Rakhashanda" style={{width:'100%', height:'100%', objectFit:'cover'}} />
         </div>
         <div className="sy-film-hole"></div>
         <div className="sy-film-hole"></div>

@@ -227,8 +227,7 @@ export default function ScrapbookReflectionsHero() {
       <div className="ref-element ref-polaroid-right">
         <div className="ref-polaroid">
           <div className="ref-polaroid-img">
-            {/* Placeholder color */}
-            <div style={{width:'100%', height:'100%', background:'#8c4550'}} />
+            <img src="/images/w2.jpeg" alt="Rakhashanda" style={{width:'100%', height:'100%', objectFit:'cover'}} />
           </div>
           <div className="ref-polaroid-caption">
             <p>same songs</p>
