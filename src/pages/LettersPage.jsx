@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import LetterCollection from '../components/sections/letters/LetterCollection';
+import ScrapbookLettersHero from '../components/sections/ScrapbookLettersHero';
 import './LettersPage.css';
 
 export default function LettersPage() {
@@ -15,6 +16,8 @@ export default function LettersPage() {
 
       <div className="letters-page-content">
         
+        <ScrapbookLettersHero />
+
         {/* Intro Section */}
         <section className="letters-intro">
           <h1 className="letters-title">LETTERS</h1>

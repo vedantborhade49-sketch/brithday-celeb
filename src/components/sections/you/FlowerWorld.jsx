@@ -116,7 +116,7 @@ const HTMLOverlay = () => {
       <div className={`text-layer ${step === 3 ? 'visible' : ''}`}>and tulips.</div>
       <div className={`text-layer ${step === 4 ? 'visible' : ''}`}>so I made you a whole garden.</div>
       <div className={`text-layer final-layer ${step === 5 ? 'visible' : ''}`}>
-        <h1>happy birthday, Rakshanda.</h1>
+        <h1>happy birthday, Rakhashanda.</h1>
         <p>may there always be beautiful things waiting for you.</p>
         <p className="urdu-text">اللہ ہمیشہ تمہاری حفاظت کرے</p>
       </div>

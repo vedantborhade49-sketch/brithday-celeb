@@ -101,7 +101,7 @@ I hope you get to fly.
 And I hope, somewhere along the way,
 you realise just how much there is waiting for you.
 
-Happy Birthday, Rakshanda.`,
+Happy Birthday, Rakhashanda.`,
     urduFooter: 'اللہ ہمیشہ تمہاری حفاظت کرے'
   }
 ];

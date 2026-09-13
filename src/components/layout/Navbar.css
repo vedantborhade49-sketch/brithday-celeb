@@ -5,50 +5,50 @@
   width: 100%;
   padding: 1.5rem 0;
   z-index: 999;
-  pointer-events: none; /* Let clicks pass through except for links */
+  pointer-events: none;
   display: flex;
   justify-content: center;
 }
 
 .navbar-container {
   display: flex;
-  gap: 1rem;
   align-items: center;
-  background: rgba(251, 249, 246, 0.8); /* Warm cream */
-  backdrop-filter: blur(8px);
-  padding: 0.5rem 1.5rem;
-  border-radius: 30px;
+  background: rgba(250, 238, 238, 0.7); /* Match the mockup pinkish glass */
+  backdrop-filter: blur(10px);
+  padding: 0.3rem 0.5rem;
+  border-radius: 50px;
   pointer-events: auto;
   box-shadow: 0 4px 20px rgba(139, 74, 88, 0.05);
-  border: 1px solid rgba(139, 74, 88, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .nav-link {
-  font-family: var(--font-sans);
+  font-family: 'Times New Roman', Times, serif; /* Or var(--font-sans) if they prefer */
   font-size: 0.8rem;
-  letter-spacing: 0.15em;
-  color: var(--text-muted);
+  letter-spacing: 0.1em;
+  color: #7a6064; /* Text color from mockup */
   text-decoration: none;
-  transition: color 0.3s ease;
+  padding: 0.6rem 1.2rem;
+  border-radius: 40px;
+  transition: all 0.3s ease;
 }
 
 .nav-link:hover {
-  color: var(--text-main);
+  color: #533a3e;
 }
 
 .nav-link.active {
-  color: var(--accent-rose);
+  background: rgba(220, 192, 198, 0.6); /* Darker pill for active */
+  color: #634348;
   font-weight: 500;
-}
-
-.nav-separator {
-  color: var(--text-muted);
-  opacity: 0.5;
-  font-size: 0.8rem;
 }
 
 @media (max-width: 768px) {
   .site-navbar {
     padding: 1rem 0;
+  }
+  .nav-link {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.75rem;
   }
 }

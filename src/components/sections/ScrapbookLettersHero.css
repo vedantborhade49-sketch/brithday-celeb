@@ -1,0 +1,270 @@
+.letters-scrapbook {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #fce4ec; /* Very soft pink base */
+  background-image: 
+    radial-gradient(circle at 50% 50%, rgba(255, 235, 238, 0.8) 0%, rgba(248, 187, 208, 0.4) 60%, rgba(244, 143, 177, 0.2) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sl-background-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 800px;
+  height: 800px;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(255,255,255,0.6) 0%, transparent 60%);
+  filter: blur(40px);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* ================= PETALS ================= */
+.sl-petals-container {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.sl-petal {
+  position: absolute;
+  font-size: 2rem;
+  opacity: 0.7;
+  filter: drop-shadow(0 5px 15px rgba(0,0,0,0.1));
+  animation: floatDown 15s infinite linear;
+}
+
+@keyframes floatDown {
+  0% { transform: translateY(-10vh) rotate(0deg) scale(0.8); opacity: 0; }
+  10% { opacity: 0.8; }
+  90% { opacity: 0.8; }
+  100% { transform: translateY(110vh) rotate(360deg) scale(1.2); opacity: 0; }
+}
+
+/* Randomize petals */
+.sl-petal-1 { left: 10%; animation-duration: 18s; animation-delay: 0s; font-size: 1.5rem; }
+.sl-petal-2 { left: 25%; animation-duration: 22s; animation-delay: 4s; font-size: 2.2rem; }
+.sl-petal-3 { left: 40%; animation-duration: 15s; animation-delay: 2s; font-size: 1.8rem; }
+.sl-petal-4 { left: 55%; animation-duration: 20s; animation-delay: 8s; font-size: 2.5rem; }
+.sl-petal-5 { left: 70%; animation-duration: 17s; animation-delay: 5s; font-size: 1.6rem; }
+.sl-petal-6 { left: 85%; animation-duration: 25s; animation-delay: 1s; font-size: 2.1rem; }
+.sl-petal-7 { left: 15%; animation-duration: 19s; animation-delay: 10s; font-size: 1.9rem; }
+.sl-petal-8 { left: 35%; animation-duration: 16s; animation-delay: 7s; font-size: 1.4rem; }
+.sl-petal-9 { left: 65%; animation-duration: 21s; animation-delay: 3s; font-size: 2.3rem; }
+.sl-petal-10 { left: 80%; animation-duration: 14s; animation-delay: 9s; font-size: 1.7rem; }
+.sl-petal-11 { left: 5%; animation-duration: 23s; animation-delay: 6s; font-size: 2.0rem; }
+.sl-petal-12 { left: 45%; animation-duration: 18s; animation-delay: 11s; font-size: 1.5rem; }
+.sl-petal-13 { left: 75%; animation-duration: 24s; animation-delay: 2s; font-size: 2.4rem; }
+.sl-petal-14 { left: 95%; animation-duration: 16s; animation-delay: 5s; font-size: 1.6rem; }
+.sl-petal-15 { left: 50%; animation-duration: 20s; animation-delay: 12s; font-size: 1.8rem; }
+
+
+/* ================= CSS CAKE ================= */
+.css-cake-wrapper {
+  position: relative;
+  z-index: 5;
+  margin-top: 50px;
+}
+
+.css-cake {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+/* Plate */
+.cake-plate {
+  width: 480px;
+  height: 40px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 
+    0 20px 30px rgba(180, 100, 120, 0.3),
+    inset 0 -5px 15px rgba(0,0,0,0.05);
+  margin-top: -20px;
+  z-index: 1;
+}
+
+/* Main Tier */
+.cake-tier {
+  width: 400px;
+  height: 220px;
+  background: linear-gradient(135deg, #fff 0%, #ffedf2 100%);
+  border-radius: 10px 10px 0 0;
+  position: relative;
+  box-shadow: 
+    -10px 0 20px rgba(255,255,255,0.8),
+    10px 0 20px rgba(210, 130, 150, 0.2),
+    inset 0 0 40px rgba(240, 160, 180, 0.1);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Frosting Drips */
+.frosting-drips {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.drip {
+  width: 40px;
+  height: 50px;
+  background: #fff;
+  border-radius: 0 0 25px 25px;
+  box-shadow: 0 3px 5px rgba(200, 120, 140, 0.1);
+}
+.drip:nth-child(even) { height: 70px; }
+.drip:nth-child(3n) { height: 40px; }
+.drip:nth-child(5n) { height: 80px; }
+
+/* Text on Cake */
+.cake-text {
+  text-align: center;
+  margin-top: 20px;
+  color: #a62a42; /* Deep red/burgundy from mockup */
+  transform: rotate(-2deg);
+}
+
+.ct-1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  font-style: italic;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1;
+}
+
+.ct-2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.ct-3 {
+  font-family: 'Caveat', cursive;
+  font-size: 1.5rem;
+  margin: 5px 0 0 0;
+}
+
+/* Candles */
+.cake-candles {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: -10px;
+  z-index: 3;
+}
+
+.candle {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.candle:nth-child(odd) { transform: translateY(10px); }
+.candle:nth-child(2) { transform: translateY(5px); }
+.candle:nth-child(4) { transform: translateY(-5px); }
+.candle:nth-child(6) { transform: translateY(15px); }
+
+.candle-body {
+  width: 10px;
+  height: 60px;
+  background: repeating-linear-gradient(
+    45deg,
+    #fff,
+    #fff 5px,
+    #ff8da1 5px,
+    #ff8da1 10px
+  );
+  border-radius: 3px 3px 0 0;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Flames */
+.flame {
+  width: 12px;
+  height: 20px;
+  background: #ffdb58;
+  border-radius: 50% 50% 20% 20%;
+  margin-bottom: 5px;
+  box-shadow: 
+    0 0 15px 5px rgba(255, 215, 0, 0.6),
+    0 0 30px 10px rgba(255, 140, 0, 0.4);
+  animation: flicker 1s infinite alternate;
+  transform-origin: bottom center;
+}
+
+.candle:nth-child(2n) .flame { animation-duration: 1.2s; animation-delay: 0.1s; }
+.candle:nth-child(3n) .flame { animation-duration: 0.9s; animation-delay: 0.3s; }
+.candle:nth-child(5n) .flame { animation-duration: 1.1s; animation-delay: 0.5s; }
+
+@keyframes flicker {
+  0% { transform: scale(1) rotate(-2deg); opacity: 0.9; }
+  50% { transform: scale(1.1) rotate(2deg); opacity: 1; }
+  100% { transform: scale(0.95) rotate(-1deg); opacity: 0.8; box-shadow: 0 0 20px 8px rgba(255, 215, 0, 0.8), 0 0 40px 15px rgba(255, 140, 0, 0.5); }
+}
+
+/* ================= RIGHT SIDE SCROLL ================= */
+.sl-side-scroll {
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  z-index: 10;
+}
+
+.sl-side-scroll::before {
+  content: '^';
+  font-family: monospace;
+  font-size: 10px;
+  color: #a62a42;
+  opacity: 0.6;
+  margin-bottom: 5px;
+}
+
+.sl-num {
+  font-family: 'Times New Roman', serif;
+  font-size: 0.75rem;
+  color: #a62a42;
+  opacity: 0.5;
+}
+
+.sl-num.active {
+  opacity: 1;
+}
+
+.sl-dot {
+  font-size: 8px;
+  color: #a62a42;
+  opacity: 0.3;
+}
+
+@media (max-width: 768px) {
+  .sl-side-scroll { right: 15px; }
+  .cake-tier { width: 300px; height: 180px; }
+  .cake-plate { width: 360px; }
+  .cake-candles { gap: 15px; }
+  .ct-1 { font-size: 1.8rem; }
+  .ct-2 { font-size: 2.2rem; }
+}

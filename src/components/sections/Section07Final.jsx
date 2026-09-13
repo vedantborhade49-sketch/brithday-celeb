@@ -21,7 +21,7 @@ export default function Section07Final() {
         </ScrollReveal>
         
         <ScrollReveal direction="up" delay={600}>
-          <h1 className="final-title">happy birthday, Rakshanda ♡</h1>
+          <h1 className="final-title">happy birthday, Rakhashanda ♡</h1>
         </ScrollReveal>
 
         <ScrollReveal direction="up" delay={1000}>

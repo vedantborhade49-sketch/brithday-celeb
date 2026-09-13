@@ -141,7 +141,7 @@ export default function ArrowsGame() {
           <div className="overlay-screen">
             <h2>YOU MADE IT.</h2>
             <p>apparently you are good at this.</p>
-            <h1 className="final-bday-msg">happy birthday, rakshanda &hearts;</h1>
+            <h1 className="final-bday-msg">happy birthday, rakhashanda &hearts;</h1>
             <button className="reset-btn" onClick={handleStart}>PLAY AGAIN</button>
           </div>
         )}

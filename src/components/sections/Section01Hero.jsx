@@ -37,7 +37,7 @@ export default function Section01Hero() {
           </ScrollReveal>
           
           <ScrollReveal direction="up" delay={400}>
-            <h1 className="hero-title">RAKSHANDA</h1>
+            <h1 className="hero-title">RAKHASHANDA</h1>
           </ScrollReveal>
           
           <ScrollReveal direction="up" delay={600}>

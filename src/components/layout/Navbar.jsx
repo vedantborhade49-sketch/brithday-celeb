@@ -12,28 +12,24 @@ export default function Navbar() {
         >
           HOME
         </NavLink>
-        <span className="nav-separator">/</span>
         <NavLink 
           to="/14-days" 
           className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}
         >
           14 DAYS
         </NavLink>
-        <span className="nav-separator">/</span>
         <NavLink 
           to="/arrows" 
           className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}
         >
           ARROWS
         </NavLink>
-        <span className="nav-separator">/</span>
         <NavLink 
           to="/you" 
           className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}
         >
           YOU
         </NavLink>
-        <span className="nav-separator">/</span>
         <NavLink 
           to="/letters" 
           className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}
