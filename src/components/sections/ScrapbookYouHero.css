@@ -17,7 +17,7 @@
 .sy-center {
   text-align: center;
   z-index: 10;
-  margin-top: 30px;
+  margin-top: -30px;
 }
 
 .sy-top-center {
@@ -138,8 +138,8 @@
 
 /* ================= LEFT SIDE ================= */
 .sy-note-top-left {
-  top: 10%;
-  left: 6%;
+  top: 8%;
+  left: 4%;
   font-family: 'Caveat', cursive;
   font-size: 1.6rem;
   color: #5c3a41;
@@ -149,8 +149,8 @@
 .sy-note-top-left p { margin: 0; }
 
 .sy-polaroid-tall-left {
-  top: 16%;
-  left: 10%;
+  top: 22%;
+  left: 6%;
   transform: rotate(-4deg);
 }
 .polaroid-tall { width: 280px; padding-bottom: 25px; }
@@ -163,8 +163,8 @@
 }
 
 .sy-note-mid-left {
-  top: 48%;
-  left: 2%;
+  top: 52%;
+  left: 3%;
   font-family: 'Caveat', cursive;
   font-size: 1.5rem;
   color: #5c3a41;
@@ -174,8 +174,8 @@
 .sy-note-mid-left p { margin: 3px 0; }
 
 .sy-polaroid-bottom-left {
-  bottom: 12%;
-  left: 20%;
+  bottom: 4%;
+  left: 6%;
   transform: rotate(6deg);
 }
 .sy-polaroid-bottom-left .sy-polaroid { width: 260px; }
@@ -190,8 +190,8 @@
 
 /* ================= RIGHT SIDE ================= */
 .sy-note-checklist {
-  top: 12%;
-  right: 20%;
+  top: 10%;
+  right: 25%;
   background: #fbf6f2;
   padding: 15px 25px;
   box-shadow: 3px 6px 20px rgba(119, 74, 82, 0.1);
@@ -228,8 +228,8 @@
 .sy-note-top-right p { margin: 2px 0; }
 
 .sy-polaroid-upper-right {
-  top: 22%;
-  right: 8%;
+  top: 28%;
+  right: 5%;
   transform: rotate(10deg);
 }
 .sy-polaroid-upper-right .sy-polaroid { width: 250px; }
@@ -242,8 +242,8 @@
 }
 
 .sy-polaroid-wide-right {
-  bottom: 22%;
-  right: 20%;
+  bottom: 6%;
+  right: 18%;
   transform: rotate(-5deg);
   z-index: 6;
 }
@@ -274,8 +274,8 @@
 
 .sy-film-strip {
   position: absolute;
-  top: 35%;
-  right: 0;
+  top: 50%;
+  right: 2%;
   width: 70px;
   height: 250px;
   background: #111;
@@ -313,8 +313,8 @@
 }
 
 .sy-note-bottom-right {
-  bottom: 10%;
-  right: 5%;
+  bottom: 12%;
+  right: 4%;
   font-family: 'Caveat', cursive;
   font-size: 1.6rem;
   color: #5c3a41;
