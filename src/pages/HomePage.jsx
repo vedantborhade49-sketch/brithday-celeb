@@ -115,6 +115,22 @@ export default function HomePage() {
         <ScrapbookYouHero />
       </div>
 
+      {/* Final Full-Screen Image Scroll */}
+      <div id="final-image-section" style={{
+        width: '100%',
+        height: '100vh',
+        backgroundImage: 'url(/images/b1.jpeg)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed',
+        position: 'relative'
+      }}>
+        <div style={{
+          position: 'absolute',
+          top: 0, left: 0, right: 0, bottom: 0,
+          background: 'linear-gradient(to bottom, rgba(247, 218, 221, 1) 0%, rgba(247, 218, 221, 0) 15%)'
+        }}></div>
+      </div>
 
     </div>
   );
