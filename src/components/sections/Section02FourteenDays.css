@@ -58,4 +58,9 @@
   color: var(--text-accent);
 }
 
-
+@media (max-width: 768px) {
+  .fourteen-text-content {
+    margin-top: 5rem;
+    padding: 0 1rem;
+  }
+}

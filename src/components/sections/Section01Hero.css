@@ -114,20 +114,34 @@
   .hero-container {
     flex-direction: column;
     text-align: center;
-    padding-top: 15vh;
+    padding-top: 10vh;
   }
   
   .hero-text-content {
     padding-right: 0;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
+  }
+  
+  .hero-title {
+    font-size: clamp(3rem, 15vw, 5rem);
+  }
+  
+  .hero-subtitle {
+    font-size: clamp(1.5rem, 8vw, 2.5rem);
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-date {
+    margin-bottom: 2rem;
   }
   
   .hero-photo-container {
     height: auto;
-    padding: 2rem 0;
+    padding: 1rem 0;
+    width: 100%;
   }
   
   .main-hero-photo {
-    max-width: 300px;
+    max-width: 80%;
   }
 }
