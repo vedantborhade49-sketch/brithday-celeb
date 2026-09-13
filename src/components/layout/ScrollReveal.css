@@ -1,0 +1,6 @@
+.scroll-reveal {
+  transition-property: opacity, transform;
+  transition-duration: 1.2s;
+  transition-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
+  will-change: opacity, transform;
+}

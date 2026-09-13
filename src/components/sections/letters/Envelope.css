@@ -1,0 +1,228 @@
+/* Envelope Dimensions: 300px wide x 200px tall */
+.envelope-wrapper {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  perspective: 1000px;
+  z-index: 1;
+}
+
+.envelope-wrapper.is-open {
+  z-index: 100;
+}
+
+.envelope-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+  cursor: pointer;
+}
+
+.envelope-wrapper:not(.is-open) .envelope-container:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+
+.envelope-wrapper.is-open .envelope-container {
+  cursor: default;
+  transform: translateY(15vh) scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .envelope-wrapper.is-open .envelope-container {
+    transform: translateY(5vh) scale(1);
+  }
+}
+
+/* ENVELOPE PARTS */
+.envelope-back {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-color: #f1c7cc; /* Inside color */
+  border-radius: 4px;
+  box-shadow: 0 10px 20px rgba(220, 150, 160, 0.2);
+  z-index: 1;
+}
+
+/* 
+  FRONT FOLDS 
+  Using border triangles ensures perfect structure across all browsers 
+*/
+.envelope-front-left {
+  position: absolute;
+  top: 0; left: 0; width: 0; height: 0;
+  border-top: 100px solid transparent;
+  border-bottom: 100px solid transparent;
+  border-left: 150px solid #f8d2d6;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.envelope-front-right {
+  position: absolute;
+  top: 0; right: 0; width: 0; height: 0;
+  border-top: 100px solid transparent;
+  border-bottom: 100px solid transparent;
+  border-right: 150px solid #f5cdd2;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.envelope-front-bottom {
+  position: absolute;
+  bottom: 0; left: 0; width: 0; height: 0;
+  border-left: 150px solid transparent;
+  border-right: 150px solid transparent;
+  border-bottom: 110px solid #f9d8dc;
+  z-index: 4;
+  pointer-events: none;
+}
+
+/* THE FLAP */
+.envelope-flap {
+  position: absolute;
+  top: 0; left: 0; width: 0; height: 0;
+  border-left: 150px solid transparent;
+  border-right: 150px solid transparent;
+  border-top: 110px solid #f0bcc2; /* Flap color */
+  transform-origin: top;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 5;
+  pointer-events: none;
+}
+
+.envelope-wrapper.is-open .envelope-flap {
+  transform: rotateX(180deg);
+  z-index: 1; /* Drop behind the letter paper */
+}
+
+/* THE LABEL */
+.envelope-label {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1rem;
+  color: #a86c77;
+  z-index: 6;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+}
+
+.envelope-wrapper.is-open .envelope-label {
+  opacity: 0;
+}
+
+/* THE LETTER PAPER */
+.letter-paper {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  width: 280px; /* Slightly narrower than envelope */
+  height: 190px;
+  background-color: #fffcfd;
+  z-index: 2; /* Between back and front folds */
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), height 0.8s ease;
+  overflow: hidden;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.envelope-wrapper.is-open .letter-paper {
+  z-index: 7; /* Pull above everything */
+  transform: translateY(-75%) scale(1.15);
+  height: 500px;
+  box-shadow: 0 -10px 40px rgba(220, 150, 160, 0.3);
+  overflow-y: auto; /* Allow scrolling if content is long */
+}
+
+@media (max-width: 768px) {
+  .envelope-wrapper.is-open .letter-paper {
+    transform: translateY(-55%) scale(1.05);
+    height: 60vh;
+    width: 290px;
+    left: 5px;
+    padding: 25px 20px;
+  }
+}
+
+/* LETTER CONTENT (Fades in when open) */
+.letter-content {
+  opacity: 0;
+  transition: opacity 0.4s ease 0.4s;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.envelope-wrapper.is-open .letter-content {
+  opacity: 1;
+}
+
+/* TYPOGRAPHY IN LETTER */
+.close-letter-btn {
+  align-self: flex-end;
+  background: none;
+  border: none;
+  color: #b58c94;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  margin-bottom: 20px;
+  padding: 5px 0;
+}
+
+.close-letter-btn:hover {
+  color: #8c5a65;
+}
+
+.letter-header {
+  border-bottom: 1px solid #f1e0e3;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+.letter-date {
+  font-size: 0.75rem;
+  color: #c4a7ad;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.letter-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  color: #5c3b42;
+  margin: 0 0 20px 0;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.letter-message-body {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #6d4d54;
+  flex-grow: 1;
+}
+
+.letter-message-body p {
+  margin: 0 0 14px 0;
+}
+
+.letter-urdu-footer {
+  font-family: 'Noto Nastaliq Urdu', serif;
+  text-align: right;
+  font-size: 1.3rem;
+  color: #8c5a65;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #f1e0e3;
+}

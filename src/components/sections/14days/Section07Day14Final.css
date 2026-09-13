@@ -1,0 +1,84 @@
+.section-14d-final {
+  min-height: 100vh;
+  background-color: var(--bg-cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  overflow: hidden;
+}
+
+.final-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70vw;
+  height: 70vw;
+  background: radial-gradient(circle, var(--accent-blush) 0%, transparent 60%);
+  opacity: 0.3;
+  filter: blur(50px);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.final-14d-container {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 800px;
+  padding: 0 5%;
+}
+
+.final-day-title {
+  font-family: var(--font-sans);
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  letter-spacing: 0.5em;
+  color: var(--text-accent);
+  margin-bottom: 2rem;
+}
+
+.final-date {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  color: var(--text-main);
+  letter-spacing: 0.1em;
+  margin-bottom: 3rem;
+}
+
+.final-text {
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  color: var(--text-muted);
+  margin-bottom: 5rem;
+}
+
+.final-wish {
+  font-size: clamp(3rem, 7vw, 6rem);
+  color: var(--accent-dark);
+  margin-bottom: 5rem;
+  transform: rotate(-3deg);
+}
+
+.continue-btn {
+  background: transparent;
+  border: 1px solid var(--accent-rose);
+  color: var(--accent-dark);
+  padding: 16px 32px;
+  border-radius: 30px;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.continue-btn:hover {
+  background: var(--accent-rose);
+  color: white;
+  transform: translateY(3px);
+  box-shadow: 0 4px 15px rgba(139, 74, 88, 0.2);
+}

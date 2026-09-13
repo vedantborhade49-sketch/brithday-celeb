@@ -1,0 +1,89 @@
+.section-plot {
+  background-color: var(--bg-ivory);
+  min-height: 150vh; /* Extra tall for scrolling effect */
+  padding: 20vh 0;
+  z-index: 10;
+  position: relative;
+}
+
+.plot-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.plot-text-layer {
+  position: relative;
+  z-index: 5;
+  text-align: center;
+  padding: 0 5%;
+}
+
+.plot-spacer {
+  height: 30vh;
+}
+
+.plot-line {
+  margin-bottom: 8vh;
+}
+
+.plot-line h3 {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  color: var(--text-main);
+  letter-spacing: -0.01em;
+  font-weight: 400;
+}
+
+.plot-line.emphasis h3 {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  color: var(--accent-dark);
+  font-style: italic;
+  margin-top: 5vh;
+}
+
+.plot-images-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.plot-img {
+  position: absolute;
+  opacity: 0.5; /* Keep them subtle so text is readable */
+  filter: grayscale(20%) sepia(10%);
+}
+
+.plot-photo {
+  width: 250px;
+  aspect-ratio: 4/5;
+}
+
+.p-img-1 {
+  top: 15%;
+  left: 10%;
+}
+
+.p-img-2 {
+  top: 45%;
+  right: 15%;
+}
+
+.p-img-3 {
+  top: 75%;
+  left: 20%;
+}
+
+@media (max-width: 768px) {
+  .plot-photo {
+    width: 150px;
+  }
+  .plot-img {
+    opacity: 0.2; /* Even more subtle on mobile to not block text */
+  }
+}

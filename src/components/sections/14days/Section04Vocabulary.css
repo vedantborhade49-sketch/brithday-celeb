@@ -1,0 +1,172 @@
+.section-vocab {
+  background-color: var(--bg-ivory);
+  padding: 15vh 0;
+  z-index: 10;
+  position: relative;
+  overflow: hidden;
+  transition: filter 3s ease;
+}
+
+.section-vocab.slow-mode {
+  filter: blur(2px) contrast(0.9);
+}
+
+.vocab-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+.vocab-header-wrapper {
+  text-align: center;
+  margin-bottom: 15vh;
+}
+
+.vocab-header {
+  font-family: var(--font-serif);
+  font-size: clamp(3rem, 6vw, 5rem);
+  color: var(--text-main);
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+
+.vocab-subtext {
+  font-family: var(--font-sans);
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: var(--text-muted);
+}
+
+.vocab-scatter {
+  position: relative;
+  height: 60vh;
+  min-height: 500px;
+  width: 100%;
+}
+
+.vocab-item {
+  position: absolute;
+  cursor: pointer;
+}
+
+.v-pos-1 { top: 10%; left: 15%; }
+.v-pos-2 { top: 40%; right: 10%; }
+.v-pos-3 { bottom: 10%; left: 25%; }
+.v-pos-4 { top: 70%; right: 30%; }
+
+.phrase-card {
+  background: white;
+  padding: 2rem 3rem;
+  border-radius: 20px;
+  box-shadow: var(--shadow-soft);
+  position: relative;
+  transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+  display: inline-block;
+}
+
+.phrase-text {
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  color: var(--accent-dark);
+  white-space: nowrap;
+}
+
+.phrase-hint {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+}
+
+/* Interactions */
+.card-chill:hover {
+  transform: scale(1.05) rotate(-2deg);
+}
+.card-chill:hover .phrase-hint {
+  opacity: 1;
+}
+
+.card-mat:hover {
+  transform: translateX(-20px) rotate(-5deg);
+  animation: slightShake 0.4s ease infinite alternate;
+}
+
+.card-basaline:hover {
+  transform: scale(1.1) rotate(2deg);
+}
+
+.basaline-sparkles {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  font-size: 1.5rem;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.card-basaline:hover .basaline-sparkles {
+  opacity: 1;
+  transform: scale(1.5) rotate(15deg);
+}
+
+.card-ok {
+  position: relative;
+}
+
+.card-ok:hover {
+  transform: scale(1.05);
+}
+
+.stamp-approved {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-15deg) scale(2);
+  color: #ff3b3b;
+  border: 4px solid #ff3b3b;
+  padding: 0.5rem 1rem;
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 2rem;
+  border-radius: 8px;
+  opacity: 0;
+  pointer-events: none;
+  animation: stampDown 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes slightShake {
+  0% { transform: translateX(-20px) rotate(-5deg); }
+  100% { transform: translateX(-22px) rotate(-6deg); }
+}
+
+@keyframes stampDown {
+  0% { transform: translate(-50%, -50%) rotate(-15deg) scale(3); opacity: 0; }
+  100% { transform: translate(-50%, -50%) rotate(-15deg) scale(1); opacity: 0.8; }
+}
+
+@media (max-width: 768px) {
+  .vocab-scatter {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+  
+  .vocab-item {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+  }
+  
+  .phrase-card {
+    padding: 1.5rem 2rem;
+  }
+}

@@ -1,0 +1,154 @@
+.section-photos {
+  background-color: var(--bg-cream);
+  flex-direction: column;
+  padding: 10vh 0;
+  z-index: 10;
+}
+
+.photos-header-area {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10vh;
+  z-index: 15;
+}
+
+.photos-header {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 5vw, 4rem);
+  color: var(--text-main);
+  margin-bottom: 1rem;
+}
+
+.photos-subtext {
+  font-family: var(--font-hand);
+  font-size: 1.5rem;
+  color: var(--text-accent);
+}
+
+.scrapbook-desk {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  height: 80vh;
+  min-height: 600px;
+}
+
+.desk-item {
+  position: absolute;
+  cursor: pointer;
+}
+
+.pos-1 {
+  top: 10%;
+  left: 15%;
+  z-index: 2;
+}
+
+.pos-2 {
+  top: 40%;
+  right: 20%;
+  z-index: 3;
+}
+
+.pos-3 {
+  bottom: 10%;
+  left: 30%;
+  z-index: 4;
+}
+
+.pos-4 {
+  top: 15%;
+  right: 10%;
+  z-index: 1;
+}
+
+.photo-large {
+  width: 350px;
+  aspect-ratio: 3/4;
+}
+
+.photo-medium {
+  width: 280px;
+  aspect-ratio: 4/5;
+}
+
+.photo-small {
+  width: 200px;
+  aspect-ratio: 1/1;
+}
+
+.photo-wide {
+  width: 300px;
+  aspect-ratio: 16/9;
+}
+
+/* Lightbox */
+.lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(74, 59, 66, 0.85);
+  backdrop-filter: blur(8px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.lightbox-img {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 4px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+  animation: scaleUp 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  background: var(--bg-ivory); /* for placeholder */
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-size: 3rem;
+  color: white;
+  transition: transform 0.2s ease;
+}
+
+.lightbox-close:hover {
+  transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleUp {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@media (max-width: 768px) {
+  .scrapbook-desk {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .desk-item {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+  }
+  
+  .photo-large, .photo-medium, .photo-small, .photo-wide {
+    width: 90vw;
+    max-width: 400px;
+  }
+}

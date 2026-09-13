@@ -1,0 +1,70 @@
+.section-fourteen {
+  z-index: 10;
+  overflow: hidden;
+  position: relative;
+}
+
+.fourteen-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.giant-number-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.giant-number {
+  font-family: var(--font-serif);
+  font-size: clamp(15rem, 40vw, 35rem);
+  color: var(--accent-blush);
+  opacity: 0.4;
+  line-height: 0.8;
+  letter-spacing: -0.05em;
+  transition: transform 0.5s ease-out;
+}
+
+.fourteen-container:hover .giant-number {
+  transform: scale(1.02);
+}
+
+.fourteen-text-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  margin-top: clamp(8rem, 15vw, 12rem);
+}
+
+.fourteen-days {
+  font-family: var(--font-serif);
+  font-size: clamp(3rem, 8vw, 6rem);
+  color: var(--text-main);
+  margin-bottom: 2rem;
+  letter-spacing: -0.02em;
+}
+
+.fourteen-subtext {
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-style: italic;
+  color: var(--text-accent);
+}
+
+.notes-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  pointer-events: none;
+}

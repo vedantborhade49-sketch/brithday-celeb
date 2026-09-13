@@ -1,0 +1,80 @@
+.section-dreams {
+  background-color: var(--bg-ivory);
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.world-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(var(--accent-blush) 1px, transparent 1px);
+  background-size: 40px 40px;
+  opacity: 0.3;
+  z-index: 1;
+}
+
+.dreams-container {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  z-index: 10;
+}
+
+.dreams-title {
+  font-family: var(--font-serif);
+  font-size: clamp(3rem, 7vw, 6rem);
+  color: var(--text-main);
+  letter-spacing: -0.02em;
+  margin-bottom: 2rem;
+}
+
+.dreams-subtext {
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--text-accent);
+  transform: rotate(-2deg);
+}
+
+.dreams-plane-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 6rem auto 0;
+  height: 100px;
+  position: relative;
+}
+
+.dreams-plane-track {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent-rose), transparent);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.3;
+}
+
+.dreams-plane {
+  position: absolute;
+  top: -15px;
+  left: -32px;
+  animation: flyAcross 8s linear infinite;
+}
+
+@keyframes flyAcross {
+  0% { transform: translateX(0) rotate(45deg); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateX(850px) rotate(45deg); opacity: 0; }
+}
+
+@media (max-width: 768px) {
+  @keyframes flyAcross {
+    0% { transform: translateX(0) rotate(45deg); opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { transform: translateX(100vw) rotate(45deg); opacity: 0; }
+  }
+}

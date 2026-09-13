@@ -1,0 +1,82 @@
+.maze-renderer-wrapper {
+  width: 100%;
+  max-width: 80vh;
+  margin: 0 auto;
+  position: relative;
+}
+
+.maze-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.maze-piece {
+  cursor: pointer;
+}
+
+.piece-line, .piece-arrow {
+  stroke: var(--text-main);
+  transition: stroke 0.2s ease, filter 0.2s ease;
+}
+
+/* Hover highlight effect to indicate playability */
+.maze-piece:hover .piece-line,
+.maze-piece:hover .piece-arrow {
+  stroke: var(--accent-rose);
+  filter: drop-shadow(0 0 2px rgba(139, 74, 88, 0.3));
+}
+
+/* Error animations */
+.shake-UP { animation: shakeUP 0.3s ease-in-out; }
+.shake-DOWN { animation: shakeDOWN 0.3s ease-in-out; }
+.shake-LEFT { animation: shakeLEFT 0.3s ease-in-out; }
+.shake-RIGHT { animation: shakeRIGHT 0.3s ease-in-out; }
+
+/* Slide out animations */
+.slide-UP { animation: slideUP 0.5s ease-in forwards; }
+.slide-DOWN { animation: slideDOWN 0.5s ease-in forwards; }
+.slide-LEFT { animation: slideLEFT 0.5s ease-in forwards; }
+.slide-RIGHT { animation: slideRIGHT 0.5s ease-in forwards; }
+
+@keyframes shakeUP {
+  0%, 100% { transform: translateY(0); }
+  33% { transform: translateY(-5px); }
+  66% { transform: translateY(2px); }
+}
+@keyframes shakeDOWN {
+  0%, 100% { transform: translateY(0); }
+  33% { transform: translateY(5px); }
+  66% { transform: translateY(-2px); }
+}
+@keyframes shakeLEFT {
+  0%, 100% { transform: translateX(0); }
+  33% { transform: translateX(-5px); }
+  66% { transform: translateX(2px); }
+}
+@keyframes shakeRIGHT {
+  0%, 100% { transform: translateX(0); }
+  33% { transform: translateX(5px); }
+  66% { transform: translateX(-2px); }
+}
+
+@keyframes slideUP {
+  0% { transform: translateY(0); opacity: 1; }
+  50% { opacity: 1; }
+  100% { transform: translateY(-1000px); opacity: 0; }
+}
+@keyframes slideDOWN {
+  0% { transform: translateY(0); opacity: 1; }
+  50% { opacity: 1; }
+  100% { transform: translateY(1000px); opacity: 0; }
+}
+@keyframes slideLEFT {
+  0% { transform: translateX(0); opacity: 1; }
+  50% { opacity: 1; }
+  100% { transform: translateX(-1000px); opacity: 0; }
+}
+@keyframes slideRIGHT {
+  0% { transform: translateX(0); opacity: 1; }
+  50% { opacity: 1; }
+  100% { transform: translateX(1000px); opacity: 0; }
+}

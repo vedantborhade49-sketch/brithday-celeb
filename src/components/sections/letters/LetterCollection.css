@@ -1,0 +1,32 @@
+.letter-collection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 70px 40px;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.collection-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 320px;
+  height: 220px;
+}
+
+.collection-item.active-item {
+  z-index: 100;
+}
+
+@media (max-width: 768px) {
+  .letter-collection {
+    gap: 60px;
+    padding: 20px 10px;
+    flex-direction: column;
+  }
+}

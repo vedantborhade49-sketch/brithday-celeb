@@ -1,0 +1,29 @@
+:root {
+  /* Colors - Dreamy Scrapbook Environment */
+  --bg-cream: #fbf9f6; /* warm cream / off-white */
+  --bg-ivory: #fffffb; /* brighter for cards/photos */
+  
+  --text-main: #4a3b42; /* soft deep brownish-burgundy */
+  --text-muted: #968a90; /* soft mauve/gray */
+  --text-accent: #8b4a58; /* muted burgundy / dusty rose */
+  
+  --accent-blush: #f5e1e5; /* subtle blush pink */
+  --accent-rose: #dca7b3; /* dusty rose */
+  --accent-mauve: #e0d5dd; /* soft mauve */
+  --accent-dark: #7a3e4c; /* very subtle darker pink */
+
+  --shadow-soft: 0 10px 40px rgba(139, 74, 88, 0.05);
+  --shadow-photo: 0 20px 50px rgba(74, 59, 66, 0.08), 0 5px 15px rgba(74, 59, 66, 0.04);
+  --shadow-hard: 0 2px 4px rgba(139, 74, 88, 0.1);
+
+  /* Typography */
+  --font-serif: 'Playfair Display', serif;
+  --font-sans: 'Inter', sans-serif;
+  --font-hand: 'Caveat', cursive; /* playful handwritten font */
+
+  /* Timings */
+  --timing-fast: 0.3s;
+  --timing-medium: 0.6s;
+  --timing-slow: 1.2s;
+  --timing-float: 6s; /* for slow floating animations */
+}

@@ -1,0 +1,129 @@
+.letters-page {
+  min-height: 100vh;
+  background-color: #fcf8f9; /* Soft blush */
+  background-image: radial-gradient(circle at 50% 0%, #fffbfc 0%, #fcf8f9 100%);
+  color: #4a3b40;
+  font-family: 'Inter', sans-serif;
+  position: relative;
+  overflow-x: hidden;
+  padding-top: 100px;
+}
+
+.letters-page-content {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.letters-dimmer {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(40, 20, 25, 0.4);
+  z-index: 50; 
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+  backdrop-filter: blur(3px);
+}
+
+.letters-page.has-open-letter .letters-dimmer {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.letters-intro {
+  text-align: center;
+  margin-bottom: 80px;
+  padding-top: 40px;
+}
+
+.letters-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  letter-spacing: 0.15em;
+  margin-bottom: 20px;
+  color: #8c5a65;
+  font-weight: 500;
+}
+
+.letters-subtitle {
+  font-size: 1.1rem;
+  color: #b58c94;
+  font-style: italic;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 10px;
+}
+
+.letters-instruction {
+  font-size: 0.85rem;
+  color: #c4a7ad;
+  letter-spacing: 0.05em;
+  text-transform: lowercase;
+}
+
+.letters-main {
+  min-height: 50vh;
+  margin-bottom: 100px;
+}
+
+.letters-outro {
+  text-align: center;
+  padding: 60px 20px 100px;
+  border-top: 1px solid rgba(140, 90, 101, 0.1);
+}
+
+.outro-text {
+  font-size: 1.1rem;
+  color: #8c5a65;
+  margin-bottom: 8px;
+}
+
+.outro-subtext {
+  font-size: 0.9rem;
+  color: #b58c94;
+  font-style: italic;
+  margin-bottom: 60px;
+}
+
+.outro-footer {
+  margin-top: 60px;
+}
+
+.footer-text {
+  font-size: 0.95rem;
+  color: #8c5a65;
+  margin-bottom: 4px;
+}
+
+.footer-subtext {
+  font-size: 0.85rem;
+  color: #c4a7ad;
+  margin-bottom: 30px;
+}
+
+.back-home-btn {
+  background: transparent;
+  border: 1px solid #dcb5bd;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  color: #8c5a65;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: lowercase;
+}
+
+.back-home-btn:hover {
+  background-color: #dcb5bd;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .letters-title {
+    font-size: 2.2rem;
+  }
+}
