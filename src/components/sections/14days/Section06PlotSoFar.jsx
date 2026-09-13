@@ -39,15 +39,15 @@ export default function Section06PlotSoFar() {
         {/* Floating background images */}
         <div className="plot-images-layer">
           <ScrollReveal direction="right" delay={500} className="plot-img p-img-1">
-            <FloatingPhoto src="/images/rakshanda-01.jpg" className="plot-photo" rotation={-5} />
+            <FloatingPhoto src="/images/r7.png" className="plot-photo" rotation={-5} />
           </ScrollReveal>
           
           <ScrollReveal direction="left" delay={900} className="plot-img p-img-2">
-            <FloatingPhoto src="/images/rakshanda-02.jpg" className="plot-photo" rotation={8} />
+            <FloatingPhoto src="/images/w4.jpeg" className="plot-photo" rotation={8} />
           </ScrollReveal>
 
           <ScrollReveal direction="up" delay={1300} className="plot-img p-img-3">
-            <FloatingPhoto src="/images/rakshanda-03.jpg" className="plot-photo" rotation={-3} />
+            <FloatingPhoto src="/images/r4.png" className="plot-photo" rotation={-3} />
           </ScrollReveal>
         </div>
 
